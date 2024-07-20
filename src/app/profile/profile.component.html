@@ -1,0 +1,33 @@
+<!-- profile.component.html -->
+<mat-toolbar color="primary">
+    <span>Mon Profil</span>
+  </mat-toolbar>
+  <mat-card class="profile-card">
+    <form (ngSubmit)="updateProfile()">
+      <mat-form-field>
+        <mat-label>Nom</mat-label>
+        <input matInput type="text" [(ngModel)]="user.name">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Prénom</mat-label>
+        <input matInput type="text" [(ngModel)]="user.firstName">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Contact</mat-label>
+        <input matInput type="text" [(ngModel)]="user.contact">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [(ngModel)]="user.email">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Adresse</mat-label>
+        <input matInput type="text" [(ngModel)]="user.address">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Mot de passe</mat-label>
+        <input matInput type="password" [(ngModel)]="user.password">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Mettre à jour</button>
+    </form>
+  </mat-card>

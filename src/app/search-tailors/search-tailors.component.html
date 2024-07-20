@@ -1,0 +1,22 @@
+<!-- search-tailors.component.html -->
+<mat-toolbar color="primary">
+    <span>Rechercher des tailleurs</span>
+  </mat-toolbar>
+  <div class="search-tailors">
+    <mat-form-field appearance="outline" class="search-input">
+      <mat-label>Rechercher</mat-label>
+      <input matInput type="text" (input)="search($event)">
+    </mat-form-field>
+    <div *ngFor="let tailor of tailors" class="tailor-card">
+      <mat-card>
+        <mat-card-title>{{ tailor.name }}</mat-card-title>
+        <mat-card-content>
+          <p>{{ tailor.address }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="bookAppointment(tailor.id)">Prendre rendez-vous</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  

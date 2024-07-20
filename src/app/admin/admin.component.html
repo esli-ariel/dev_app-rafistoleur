@@ -1,0 +1,9 @@
+<!-- admin.component.html -->
+<mat-toolbar color="primary">
+    <span>Tableau de bord de l'administrateur</span>
+  </mat-toolbar>
+  <div class="admin-dashboard">
+    <button mat-raised-button color="primary" (click)="manageUsers()">Gérer les utilisateurs</button>
+    <button mat-raised-button color="accent" (click)="viewAppointments()">Voir les rendez-vous</button>
+  </div>
+  <router-outlet></router-outlet>
